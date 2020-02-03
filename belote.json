@@ -1,0 +1,72 @@
+{
+  "apps": [
+    {
+      "name": "DISPATCHER",
+      "script": "./dev.bundle.js",
+      "watch": true,
+      "autorestart": true,
+      "cwd": "C:/Users/levon/Desktop/BELOTE_FINAL/DISPATCHER_NODE/backend",
+      "env": {
+        "PROFILE": "development",
+        "KIND": "DISPATCHER",
+        "RUNNING_HOST": "127.0.0.1",
+        "RUNNING_PORT": 17000,
+        "INTERCOMM_HOST": "127.0.0.1",
+        "INTERCOMM_PORT": 17098,
+        "CHECKING_INTERVAL": 5000,
+        "NODE_STATUS_INTERVAL": 15000,
+        "SOCKET_URL": "http://localhost",
+        "SOCKET_PATH": "/socket.io.1",
+        "MYSQL_HOST": "37.187.164.40",
+        "MYSQL_USER": "belotta",
+        "MYSQL_PASSWORD": "utook77",
+        "MYSQL_DB": "belote",
+        "MYSQL_PORT": 3306
+      }
+    },
+    {
+      "name": "TRANSPORT",
+      "script": "./dev.bundle.js",
+      "watch": true,
+      "autorestart": true,
+      "cwd": "C:/Users/levon/Desktop/BELOTE_FINAL/TRANSPORT_NODE",
+      "env": {
+        "PROFILE": "development",
+        "SERVER_ID": 1,
+        "NODE_ID": 2,
+        "KIND": "TRANSPORT",
+        "PULL_HOST": "127.0.0.1",
+        "PULL_PORT": 17052,
+        "PUSH_HOST": "127.0.0.1",
+        "PUSH_PORT": 17098,
+        "PUBLIC_HOST": "transport.gamebox.rocks",
+        "PUBLIC_PORT": 80,
+        "SERVER_HOST": "127.0.0.1",
+        "SERVER_PORT": 18012,
+        "SOCKET_URL": "http://localhost",
+        "SOCKET_PATH": "/socket.io.1"
+      }
+    },
+    {
+      "name": "GAME",
+      "script": "./dev.bundle.js",
+      "watch": true,
+      "autorestart": true,
+      "cwd": "C:/Users/levon/Desktop/BELOTE_FINAL/ROOM-BOX_NODE",
+      "env": {
+        "PROFILE": "production",
+        "SERVER_ID": 2,
+        "NODE_ID": 1,
+        "KIND": "GAME",
+        "PULL_HOST": "127.0.0.1",
+        "PULL_PORT": 17051,
+        "PUSH_HOST": "127.0.0.1",
+        "PUSH_PORT": 17098,
+        "SERVER_HOST": "127.0.0.1",
+        "SERVER_PORT": 18011,
+        "SOCKET_URL": "http://localhost",
+        "SOCKET_PATH": "/socket.io.1"
+      }
+    }
+  ]
+}
